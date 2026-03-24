@@ -1,0 +1,14 @@
+app:
+  jpa:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: postgres
+    password: password
+    ddl-auto: validate
+    show-sql: false
+    entity-package: com.itcall.**.entity
+    repository-package: com.itcall.**.repository
+spring:
+  config:
+    activate:
+      on-profile: prd

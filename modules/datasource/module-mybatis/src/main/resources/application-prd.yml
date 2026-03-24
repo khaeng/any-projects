@@ -1,0 +1,13 @@
+app:
+  mybatis:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: postgres
+    password: password
+    type-aliases-package: com.itcall.**.dao
+    mapper-package: com.itcall.**.mybatis
+    mapper-locations: classpath:mybatis/**/*.xml
+spring:
+  config:
+    activate:
+      on-profile: prd

@@ -1,0 +1,11 @@
+app:
+  cache:
+    mode: NONE # Template for prod, can be overridden to NONE/SINGLE/CLUSTER/SENTINEL.
+    # mode: SINGLE
+    # nodes:
+    #   - 127.0.0.1:6379
+    # password: your_redis_password
+spring:
+  config:
+    activate:
+      on-profile: prd

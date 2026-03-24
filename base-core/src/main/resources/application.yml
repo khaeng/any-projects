@@ -1,0 +1,5 @@
+# Base Core - Dev Configuration
+spring:
+  config:
+    activate:
+      on-profile: default

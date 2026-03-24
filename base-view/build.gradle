@@ -1,0 +1,18 @@
+plugins {
+    id 'org.springframework.boot'
+}
+
+dependencies {
+    api project(':base-core')
+    api 'org.springframework.boot:spring-boot-starter-web'
+    api 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    api 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}

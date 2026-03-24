@@ -1,0 +1,5 @@
+websocket:
+  uri: /wss
+  heartbeat:
+    interval-seconds: 10
+    timeout-threshold: 3

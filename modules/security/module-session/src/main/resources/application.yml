@@ -1,0 +1,5 @@
+spring:
+  session:
+    # store-type: redis # Uncomment if enforcing specific store type
+    # redis:
+    #   namespace: "spring:session"

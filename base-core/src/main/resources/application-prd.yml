@@ -1,0 +1,5 @@
+# Base Core - Prod Configuration
+spring:
+  config:
+    activate:
+      on-profile: prd

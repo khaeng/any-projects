@@ -1,0 +1,5 @@
+# Base API - Prod Configuration
+spring:
+  config:
+    activate:
+      on-profile: prd

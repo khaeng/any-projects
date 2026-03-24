@@ -1,0 +1,16 @@
+plugins {
+    id 'org.springframework.boot'
+}
+
+dependencies {
+    implementation project(':base-view')
+}
+
+// Ensure this module produces an executable jar
+bootJar {
+    enabled = true
+}
+
+jar {
+    enabled = false
+}

@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    api project(':base-core')
+    api 'org.springframework.boot:spring-boot-starter-websocket'
+    
+    // For JSON processing if needed explicitly or via transitive
+    api 'com.fasterxml.jackson.core:jackson-databind'
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}

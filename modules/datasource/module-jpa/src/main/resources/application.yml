@@ -1,0 +1,10 @@
+app:
+  jpa:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: ""
+    ddl-auto: update
+    show-sql: true
+    entity-package: com.itcall.**.entity
+    repository-package: com.itcall.**.repository

@@ -1,0 +1,19 @@
+plugins {
+    id 'org.springframework.boot'
+}
+
+dependencies {
+    api project(':base-core')
+    api 'org.springframework.boot:spring-boot-starter-webflux'
+    api 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
+    api 'org.springframework.boot:spring-boot-starter-security'
+    api 'io.projectreactor.netty:reactor-netty'
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}

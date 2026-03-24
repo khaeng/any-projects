@@ -1,0 +1,9 @@
+websocket:
+  uri: /wss
+  heartbeat:
+    interval-seconds: 10
+    timeout-threshold: 3
+spring:
+  config:
+    activate:
+      on-profile: prd

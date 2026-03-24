@@ -1,0 +1,23 @@
+rootProject.name = 'any-projects'
+
+include 'base-core'
+include 'base-view'
+include 'base-api'
+
+// Dynamic module inclusion
+def maxSearchDepth = 4
+
+['modules', 'apps'].each { dirName ->
+    if (file(dirName).exists()) {
+        file(dirName).traverse(type: groovy.io.FileType.FILES, maxDepth: maxSearchDepth) { file ->
+            if (file.name.endsWith('.gradle') && file.name != 'build.gradle' && file.name != 'settings.gradle') {
+                def projectName = file.name.replace('.gradle', '')
+                def projectPath = ":${projectName}"
+                
+                include projectPath
+                project(projectPath).projectDir = file.parentFile
+                project(projectPath).buildFileName = file.name
+            }
+        }
+    }
+}
